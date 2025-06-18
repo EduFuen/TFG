@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.SeleccionarContratoController" style="-fx-padding: 20;">
+
+    <Label text="Renovar Contrato" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+
+    <HBox spacing="10">
+        <Label text="DNI: " />
+        <Label fx:id="labelDni" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Nombre: " />
+        <Label fx:id="labelNombre" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Apellido: " />
+        <Label fx:id="labelApellido" />
+    </HBox>
+
+
+    <TableView fx:id="tablaContratos" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn text="ID Contrato" fx:id="colIdContrato"/>
+            <TableColumn text="Fecha Inicio" fx:id="colFechaInicio"/>
+            <TableColumn text="Fecha Final" fx:id="colFechaFinal"/>
+            <TableColumn text="Detalles" fx:id="colDetalles"/>
+            <TableColumn text="Importe" fx:id="colImporte"/>
+        </columns>
+    </TableView>
+
+
+    <Region style="-fx-pref-height: 20;"/>
+
+
+    <HBox spacing="10" alignment="CENTER" style="-fx-padding-top: 10;">
+        <Button text="Seleccionar" onAction="#handleRenovarSeleccionado"/>
+
+
+        <Region fx:id="spacer"/>
+
+        <Button text="Cancelar" onAction="#handleCancelar"/>
+    </HBox>
+</VBox>

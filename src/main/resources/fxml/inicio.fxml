@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.Inicio">
+    <children>
+
+        <VBox spacing="30" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+
+                <Button fx:id="areaDatosButton" text="AREA DATOS" onAction="#handleOpenAreaDatos"
+                        style="-fx-font-size: 30px; -fx-pref-width: 750px; -fx-pref-height: 200px; -fx-background-radius: 10;" />
+
+
+                <Button fx:id="areaTrabajoButton" text="AREA TRABAJO" onAction="#handleOpenAreaTrabajo"
+                        style="-fx-font-size: 30px; -fx-pref-width: 750px; -fx-pref-height: 200px; -fx-background-radius: 10;" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.AnadirProductoController">
+    <children>
+        <Label text="Añadir Producto" style="-fx-font-size: 20;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+        <Label text="Cantidad:" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50"/>
+        <TextField fx:id="txtCantidad" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="80" prefWidth="200"/>
+
+        <Label text="Descripción:" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="110"/>
+        <TextField fx:id="txtDescripcion" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="140" prefWidth="200"/>
+
+        <Label text="Observaciones:" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="170"/>
+        <TextArea fx:id="txtObservaciones" wrapText="true" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="200" prefHeight="100" prefWidth="200"/>
+
+        <Label text="Peso (g):" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="310"/>
+        <TextField fx:id="txtPeso" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="340" prefWidth="200"/>
+
+
+        <Label text="Importe Total:" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="380"/>
+        <TextField fx:id="txtImporte" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="410" prefWidth="200"/>
+
+        <Button text="Guardar Producto" onAction="#handleGuardarProducto" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="460"/>
+        <Label fx:id="lblMensaje" text="" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="500"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.RenovarRescatarController">
+    <Label text="Detalles de Renovación" style="-fx-font-size: 20; -fx-font-weight: bold;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+    <VBox spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50">
+        <Label fx:id="labelIdContrato" />
+        <Label fx:id="labelFechaInicio" />
+        <Label fx:id="labelFechaFinal" />
+        <Label fx:id="labelDetalles" />
+        <Label fx:id="labelNombreCliente" text="Nombre del Cliente: " />
+        <Label fx:id="labelImporteContrato" text="Importe del Contrato: " />
+    </VBox>
+
+
+    <Label fx:id="lblMensaje" text="" style="-fx-text-fill: green;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="500"/>
+
+
+    <HBox spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="300">
+        <Label text="Aportación:" />
+        <TextField fx:id="inputAportacion" promptText="Ingrese la aportación" />
+    </HBox>
+
+
+    <Button text="Cancelar" onAction="#handleCancelar" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10"/>
+
+
+    <Button text="Rescatar Contrato" onAction="#handleRescatarContrato" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="180"/>
+
+
+    <Button fx:id="botonRenovarContrato" text="Renovar Contrato" onAction="#handleRenovarContrato" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="300"/>
+    <Label fx:id="labelImporteRenovacion" text="Importe de la Renovación: " AnchorPane.leftAnchor="10" AnchorPane.topAnchor="350"/>
+</AnchorPane>

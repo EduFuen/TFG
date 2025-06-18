@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.EditarClienteController" spacing="10" alignment="CENTER">
+    <children>
+        <Label text="DNI:" />
+        <TextField fx:id="dniField" onKeyReleased="#handleDniValidation" />
+
+        <Label text="Nombre:" />
+        <TextField fx:id="nombreField" />
+
+        <Label text="Apellido:" />
+        <TextField fx:id="apellidoField" />
+
+        <Label text="Población:" />
+        <TextField fx:id="poblacionField" />
+
+        <Label text="Teléfono:" />
+        <TextField fx:id="telefonoField" />
+
+        <Label text="Dirección:" />
+        <TextField fx:id="direccionField" />
+
+        <HBox spacing="10" alignment="CENTER">
+            <children>
+                <Button text="Guardar" onAction="#handleGuardar" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

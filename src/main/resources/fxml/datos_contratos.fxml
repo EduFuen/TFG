@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.DatosContratosController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10;">
+
+            <Label text="Buscar por ID Contrato, DNI Cliente:" />
+            <TextField fx:id="searchTextField" promptText="Introduce ID o DNI" />
+
+
+            <ComboBox fx:id="tipoComboBox" promptText="Seleccionar Tipo">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Cualquiera" />
+                        <String fx:value="Compra" />
+                        <String fx:value="Empeño" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+
+
+            <DatePicker fx:id="fechaInicioPicker" promptText="Fecha Inicio" />
+
+
+            <DatePicker fx:id="fechaFinalPicker" promptText="Fecha Final" />
+
+
+            <Button fx:id="btnBuscar" text="Buscar" onAction="#handleBuscar" />
+
+
+            <Button fx:id="btnLimpiar" text="Limpiar" onAction="#handleLimpiar" />
+
+            <Button fx:id="btnVerRenovaciones" text="Ver Renovaciones" onAction="#handleVerRenovaciones" alignment="TOP_LEFT"/>
+        </HBox>
+
+    </top>
+
+
+    <Label text="Lista de Contratos" style="-fx-font-size: 24px; -fx-padding: 10;" />
+
+    <center>
+
+        <TableView fx:id="contratosTableView">
+            <columns>
+                <TableColumn fx:id="idContratoColumn" text="ID Contrato" />
+                <TableColumn fx:id="idPolColumn" text="ID Póliza" />
+                <TableColumn fx:id="clienteColumn" text="Cliente" />
+                <TableColumn fx:id="fechaColumn" text="Fecha de Inicio" />
+                <TableColumn fx:id="fechaFinalColumn" text="Fecha Final" />
+                <TableColumn fx:id="tipoColumn" text="Tipo de Contrato" />
+                <TableColumn fx:id="estadoColumn" text="Rescatado" />
+                <TableColumn fx:id="importeColumn" text="Importe" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 10;">
+
+            <Button fx:id="btnCancelar" text="Cancelar" onAction="#handleCancelar" />
+        </HBox>
+    </bottom>
+</BorderPane>

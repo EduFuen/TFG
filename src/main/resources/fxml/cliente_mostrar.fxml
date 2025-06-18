@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.ClientesMostrarController">
+    <Label text="Lista de Clientes" style="-fx-font-size: 24;"/>
+
+    <TableView fx:id="clientesTable">
+        <columns>
+            <TableColumn fx:id="dniColumn" text="Dni" />
+            <TableColumn fx:id="nombreColumn" text="Nombre" />
+            <TableColumn fx:id="apellidoColumn" text="Apellido" />
+            <TableColumn fx:id="poblacionColumn" text="Email" />
+            <TableColumn fx:id="telefonoColumn" text="Telefono" />
+            <TableColumn fx:id="direccionColumn" text="Direccion" />
+        </columns>
+    </TableView>
+
+    <HBox alignment="BOTTOM_RIGHT" spacing="50">
+        <Button  text="Cancelar" onAction="#handleCancelar"/>
+    </HBox>
+</VBox>

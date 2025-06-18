@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.comproOro.gestion.controller.NuevoContratoController" hgap="10" vgap="10" style="-fx-padding: 20 10;">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="30"/>
+        <ColumnConstraints percentWidth="60"/>
+        <ColumnConstraints percentWidth="10"/>
+    </columnConstraints>
+
+    <Label text="Datos del Cliente" style="-fx-font-size: 20;" GridPane.columnSpan="3" GridPane.halignment="CENTER"/>
+
+    <Label text="DNI:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <Label fx:id="lblDni" text="" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Nombre:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Label fx:id="lblNombre" text="" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="Apellido:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Label fx:id="lblApellido" text="" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="Tipo de contrato:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="comboBoxTipoContrato" GridPane.rowIndex="4" GridPane.columnIndex="1" prefWidth="200"/>
+
+    <Label text="Lista de Productos" style="-fx-font-size: 20;" GridPane.rowIndex="5" GridPane.columnSpan="3" GridPane.halignment="CENTER"/>
+
+    <ListView fx:id="listViewProductos" GridPane.rowIndex="6" GridPane.columnSpan="3" prefHeight="150" />
+
+    <Button fx:id="btnEliminarProducto" text="Eliminar Producto" onAction="#handleEliminarProducto" GridPane.rowIndex="7" GridPane.columnIndex="2"/>
+
+    <Label text="Detalles del Contrato:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <TextArea fx:id="txtDetallesContrato" wrapText="true" GridPane.rowIndex="8" GridPane.columnIndex="1" GridPane.columnSpan="2" prefHeight="75"/>
+
+    <CheckBox fx:id="checkBoxGenerarIdPol" text="Generar ID Pol" GridPane.rowIndex="9" GridPane.columnIndex="0" GridPane.columnSpan="3"/>
+
+
+    <Button fx:id="btnGuardarContrato" text="Guardar Contrato" onAction="#handleGuardarContrato" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+    <Button fx:id="btnAnadirProducto" text="Añadir Producto" onAction="#handleAnadirProducto" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+
+    <Button fx:id="btnProcesar" text="Procesar" onAction="#handleProcesar" GridPane.rowIndex="11" GridPane.columnIndex="0" disable="true"/>
+
+    <Button fx:id="btnCancelar" text="Cancelar" onAction="#handleCancelar" GridPane.rowIndex="11" GridPane.columnIndex="2"/>
+
+    <Label fx:id="lblMensaje" text="" style="-fx-text-fill: red;" GridPane.rowIndex="12" GridPane.columnSpan="3" GridPane.halignment="CENTER"/>
+</GridPane>
